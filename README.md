@@ -1,32 +1,16 @@
 # cces
 
-<Strong>Project Overview:</strong>
-This is an online survey platform and utilize cloud computing resources on demand to compute and retrieve some knowledgeable insight out of the survey data received.The restful web services will store the received user input in a distributed storage platform backed by a cloud computing platform 
-
+<strong>Project Overview:</strong>
+This is an online survey platform which utilizes cloud computing resources on demand to compute and provide some knowledgeable insight out of the survey data received. The platform consists of RESTful endpoints which store the received user input in a NoSQL Distributed Storage Platform (DynamoDB) as well as business logic to perform Analytical data analysis over the distributed storage engine. 
+<br>
+Technologies Used:
 <ul>
-
-<li>Survey Question -
-Which is your favorite car ?
-1) Honda
-2) Mercedes
-3) Ferrari
-
-Amazon Applications-
-Elastic Beanstalk
-Dynamo DB
-
-We did not use IAAS service which is EC2, because we had to configure lot many things like – installing TOMCAT. Hence we are using PAAS componenet which is EBS (Elastic Beanstalk) to host our application. 
-
-Need of EBS
-Through EBS we are deploying our application.
-It easy to use, just have to mention the programming language that we want to use.
-Provide the War or Jar file.
-
-
-
-We have written a program and compiled it and it generated a war file. Here in the left side cces is a file which has been converted  in to cces.war and on the right side we have uploaded cces.war file in EBS.</li>
-<img src="./demo_images/tab1.png"/>
-
+<li>DynamoDB</li>
+<li>AWS Elastic BeanStalk</li>
+<li>Java</li>
+<li>Spring-Boot</li>
+</ul>
+<ul>
 <li>There is a screen shot of our EBS configuration below where PORT is 8080, Scaling is single instance, Instances – t1.micro and we are using Spring Boot Framework to design our application.</li>
 <img src="./demo_images/section.png"/>
 
