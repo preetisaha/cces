@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<!-- Styles -->
+<style>
+body { background-color: #30303d; color: #fff; }
+#chartdiv {
+	width		: 100%;
+	height		: 500px;
+	font-size	: 11px;
+}							
+</style>
+
+<link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Popularity of Cars by age (American) </h2>
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+
+<script src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+
+<!-- Chart code -->
+<script>
+var chart = AmCharts.makeChart("chartdiv", {
+    "type": "serial",
+    "theme": "dark",
+    "marginRight":30,
+    "legend": {
+        "equalWidths": false,
+        "periodValueText": "total: [[value.sum]]",
+        "position": "top",
+        "valueAlign": "left",
+        "valueWidth": 100
+    },
+    "dataProvider": [{
+        "age": 10,
+        "honda": 1587,
+        "mercedes": 650,
+        "ferrari": 121
+    }, {
+        "age": 20,
+        "honda": 1567,
+        "mercedes": 683,
+        "ferrari": 146
+    }, {
+        "age": 30,
+        "honda": 1617,
+        "mercedes": 691,
+        "ferrari": 138
+    }, {
+        "age": 40,
+        "honda": 1630,
+        "mercedes": 642,
+        "ferrari": 127
+    }, {
+        "age": 50,
+        "honda": 1660,
+        "mercedes": 699,
+        "ferrari": 105
+    }, {
+        "age": 60,
+        "honda": 1683,
+        "mercedes": 721,
+        "ferrari": 109
+    }, {
+        "age": 70,
+        "honda": 1691,
+        "mercedes": 737,
+        "ferrari": 112
+    }],
+    "valueAxes": [{
+        "stackType": "regular",
+        "gridAlpha": 0.07,
+        "position": "left",
+        "title": "Traffic incidents"
+    }],
+    "graphs": [{
+        "balloonText": "<img src='http://www.amcharts.com/lib/3/images/car.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>[[value]]</b></span>",
+        "fillAlphas": 0.6,
+        "hidden": true,
+        "lineAlpha": 0.4,
+        "title": "Honda",
+        "valueField": "honda"
+    }, {
+        "balloonText": "<img src='http://www.amcharts.com/lib/3/images/car.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>[[value]]</b></span>",
+        "fillAlphas": 0.6,
+        "lineAlpha": 0.4,
+        "title": "Mercedes",
+        "valueField": "mercedes"
+    }, {
+        "balloonText": "<img src='http://www.amcharts.com/lib/3/images/car.png' style='vertical-align:bottom; margin-right: 10px; width:28px; height:21px;'><span style='font-size:14px; color:#000000;'><b>[[value]]</b></span>",
+        "fillAlphas": 0.6,
+        "lineAlpha": 0.4,
+        "title": "Ferrari",
+        "valueField": "ferrari"
+    }],
+    "plotAreaBorderAlpha": 0,
+    "marginTop": 10,
+    "marginLeft": 0,
+    "marginBottom": 0,
+    "chartScrollbar": {},
+    "chartCursor": {
+        "cursorAlpha": 0
+    },
+    "categoryField": "age",
+    "categoryAxis": {
+        "startOnAxis": true,
+        "axisColor": "#DADADA",
+        "gridAlpha": 0.07,
+        "title": "Age"
+    },
+    "export": {
+    	"enabled": true
+     }
+});
+</script>
+
+<!-- HTML -->
+<div id="chartdiv"></div>
+
+</body>
+</html>
